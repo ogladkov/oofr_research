@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Фондовый рынок</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h2 align="center">Фондовый рынок</h2>
+
+        <div align="center">{% include 'stocks_table.html' %}</div>
+
+        <div class="layout">{% include 'idx_mmvb.html' %}</div>
+
+        <div class="row_container">
+            <!--<div class="layout">{% include 'mmvb_10.html' %}</div>-->
+            <div class="layout">{% include 'msci.html' %}</div>
+            <div class="layout">{% include 'epfr.html' %}</div>
+        </div>
+
+        <div id="text_stocks">{{ file }}</div>
+
+        <div class="footer">{% include 'footer.html' %}</div>
+    </div>
+</body>
+</html>

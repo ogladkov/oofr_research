@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>OOFR Research</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <div class='container'>
+        <h2>Отчет о финансовых рынках:</h2><br>
+        <div class="mmenu">
+            <a href={{ url_for('macro') }}>Макроэкономика</a><a> | </a><a href={{ url_for('parse_macro') }}>Обновить</a><br>
+            <a href={{ url_for('commodities') }}>Товарные рынки</a><a> | </a><a href={{ url_for('parse_commod') }}>Обновить</a><br>
+            <!--<a href={{ url_for('currency_1') }}>Денежный и валютный рынки (Часть 1)</a><a> | </a><a href={{ url_for('currency_2') }}>Денежный и валютный рынки (Часть 2)</a><a> | </a><a href={{ url_for('parse_curr') }}>Обновить</a><br>-->
+            <a href={{ url_for('currency_1') }}>Денежный и валютный рынки</a><a> | </a><a href={{ url_for('parse_curr') }}>Обновить</a><br>
+            <!--<a href={{ url_for('stocks_1') }}>Фондовый рынок (Часть 1)</a><a> | </a><a href={{ url_for('stocks_2') }}>Фондовый рынок (Часть 2)</a><a> | </a><a href={{ url_for('parse_stocks') }}>Обновить</a><br>-->
+            <a href={{ url_for('stocks_1') }}>Фондовый рынок</a><a> | </a><a> | </a><a href={{ url_for('parse_stocks') }}>Обновить</a><br>
+            <a href={{ url_for('stocks_2') }}>Облигации РФ</a><br>
+            <a href={{ url_for('stocks_3') }}>Акции РФ</a><br>
+            <a href={{ url_for('debts') }}>Долговой рынок</a><a> | </a><a href={{ url_for('parse_debts') }}>Обновить</a><br>
+            <a href={{ url_for('spfi') }}>СПФИ</a><a> | </a><a href={{ url_for('parse_spfi') }}>Обновить</a>
+            <br>
+            <a href={{ url_for('compile') }}>Компилция</a>
+        </div>
+    </div>
+</body>
+</html>

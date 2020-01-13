@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Денежный и валютный рынки</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h2>Денежный и валютный рынки</h2>
+
+        <div align="center">{% include 'curr_table.html' %}</div>
+
+        <div class="row_container">
+            <div class="layout">{% include 'fx.html' %}</div>
+            <div class="layout">{% include 'rates.html' %}</div>
+        </div>
+
+        <div class="footer">{% include 'footer.html' %}</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <title>Товарные рынки</title>
+</head>
+<body>
+    <div class="container">
+        <h2 align="center">Товарные рынки</h2><br>
+
+        <div align="center">{% include 'commod_table.html' %}</div>
+
+        <div class="commod_layout">
+            <div class="layout">{% include 'gold_silver.html' %}</div>
+            <div class="layout">{% include 'brent.html' %}</div>
+
+            <div class="layout">{% include 'coins.html' %}</div>
+            <div class="layout">{% include 'crb.html' %}</div>
+        </div>
+
+        <!--<div id="text_commodities">{{ file }}</div>-->
+
+        <div class="footer">
+            {% include 'footer.html' %}
+        </div>
+
+    </div>
+</body>
+</html>

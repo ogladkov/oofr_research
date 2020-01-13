@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RNCB Research</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+    <div>
+        <div class="title_container">
+            <div class="logo">
+                <img src="static/img/rncb_logo.png" width="150">
+            </div>
+
+            <div class="title_text">
+                <p>ОБЗОР ОСНОВНЫХ ИНДИКАТОРОВ И ИНСТРУМЕНТОВ ФИНАНСОВОГО РЫНКА</p>
+            </div>
+
+            <div class="index">
+                <ll>
+                    <li>Макроэкономика</li>
+                    <li>Товарные рынки</li>
+                    <li>Денежный и валютный рынки</li>
+                    <li>Фондовый рынок</li>
+                    <li>Облигации РФ</li>
+                    <li>Акции РФ</li>
+                    <li>Долговой рынок</li>
+                    <li>СПФИ</li>
+                </ll>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+            {% include 'footer.html' %}
+        </div>
+    </div>
+
+
+    <div class="subcontainer">
+    <h2>Макроэкономика</h2>
+
+    <div class="layout">{% include 'mm.html' %}</div>
+    <div class="layout">{% include 'inflation.html' %}</div>
+    <div class="layout">{% include 'trade_balance.html' %}</div>
+    <div class="layout">{% include 'pmi.html' %}</div>
+    <div class="layout">{% include 'invests.html' %}</div>
+
+    <div id="text_macro">{{ text_macro_file }}</div>
+
+    <div class="footer">
+        {% include 'footer.html' %}
+    </div>
+</div>
+
+
+    <div class="subcontainer">
+        <h2>Денежный и валютный рынки</h2>
+
+        <div align="center">{% include 'curr_table.html' %}</div>
+
+        <div class="row_container">
+            <div class="layout">{% include 'fx.html' %}</div>
+            <div class="layout">{% include 'rates.html' %}</div>
+        </div>
+
+        <div class="footer">{% include 'footer.html' %}</div>
+    </div>
+
+
+    <div class="subcontainer">
+        <h2 align="center">Фондовый рынок</h2>
+
+        <div align="center">{% include 'stocks_table.html' %}</div>
+
+        <div class="layout">{% include 'idx_mmvb.html' %}</div>
+
+        <div class="row_container">
+            <div class="layout">{% include 'msci.html' %}</div>
+            <div class="layout">{% include 'epfr.html' %}</div>
+        </div>
+
+        <div id="text_stocks">{{ text_stocks_file }}</div>
+
+        <div class="footer">{% include 'footer.html' %}</div>
+    </div>
+
+
+    <div class="subcontainer">
+        <h2 align="center">Акции РФ</h2>
+
+        <div align="center">{% include 'fc.html' %}</div>
+
+        <div class="row_container">
+            <div class="layout">{% include 'roe_pbv.html' %}</div>
+            <div class="layout">{% include 'roe_evebitda.html' %}</div>
+        </div>
+        <div class="footer">{% include 'footer.html' %}</div>
+    </div>
+
+
+    <div class="subcontainer">
+        <br>
+        <br>
+        <h2 align="center">Облигации РФ</h2>
+        <div align="center">{% include 'portfolio_table.html' %}</div>
+        <div id="text_stocks">{{ file }}</div>
+        <div class="footer">{% include 'footer.html' %}</div>
+    </div>
+
+
+    <div class="subcontainer">
+        <h2>Долговой рынок</h2>
+        <div>
+            <div class="layout">{% include 'gcurve.html' %}</div>
+            <div class="layout">{% include 'gspread.html' %}</div>
+            <div class="layout">{% include 'debt_comp.html' %}</div>
+            <div class="layout">{% include 'gold_copper.html' %}</div>
+        </div>
+
+        <div id="text_debts">{{ text_debts_file }}</div>
+
+        <div class="footer">{% include 'footer.html' %}</div>
+    </div>
+
+
+    <div class="subcontainer">
+        <h2 align="center">Срочный рынок</h2>
+        <div class="layout">{% include 'rts.html' %}</div>
+        <div class="layout">{% include 'si.html' %}</div>
+        <div class="layout">{% include 'smile.html' %}</div>
+        <div class="layout">{% include 'rvi.html' %}</div>
+        <div class="footer">{% include 'footer.html' %}</div>
+    </div>
+</body>
+
+</html>

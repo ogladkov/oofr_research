@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Акции РФ</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h2 align="center">Акции РФ</h2>
+
+        <div align="center">{% include 'fc.html' %}</div>
+
+        <div class="row_container">
+            <div class="layout">{% include 'roe_pbv.html' %}</div>
+            <div class="layout">{% include 'roe_evebitda.html' %}</div>
+        </div>
+        <div class="footer">{% include 'footer.html' %}</div>
+    </div>
+</body>
+</html>
